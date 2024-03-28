@@ -34,6 +34,21 @@ public class EVA2_13ELSE_IF {
         else
                 System.out.println("El numero no es un dia valido");
              
+         Scanner captu = new Scanner(System.in);
+        System.out.println("Inroduce el dia de la semana en numero (1 - 7)");
+        int dia = captu.nextInt();
+        String[] diasDeLaSemana = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
         
+        if(dia >= 1 && dia <= 7){
+            System.out.println(diasDeLaSemana[dia - 1]);
+        }else{
+            System.out.println("No introdujuste un valor correcto");
+        }
+        
+        System.out.println(
+            (dia >= 1 && dia <= 7) ? 
+            diasDeLaSemana[dia - 1] : 
+            "No introdujuste un valor correcto"
+            );
     }
 }
